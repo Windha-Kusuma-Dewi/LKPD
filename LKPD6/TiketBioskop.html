@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Bioskop</title>
+</head>
+<body>
+    <script>var VIP = 50;
+
+        if (VIP <= 50) {
+            var VIP = VIP;
+        } else {
+            var VIP = 50;
+        }
+
+        var HarVIP = 35000 * VIP; 
+
+        if (VIP >= 35) {
+            keunVIP = HarVIP * (25/100);
+        } else if (VIP >= 20 && VIP < 35) {
+            keunVIP = HarVIP * (15/100);
+        } else {
+            keunVIP = HarVIP * (5/100);
+        }
+
+        var Eks = 41;
+
+        if (Eks <= 50) {
+            var Eks = Eks;
+        } else {
+            var Eks = 50;
+        }
+
+        var HarEks = 25000 * Eks;
+
+        if (Eks >= 40) {
+            keunEks = HarEks * (20/100);
+        } else if (Eks >=20 && Eks < 40) {
+            keunEks = HarEks * (10/100);
+        } else {
+            keunEks = HarEks * (2/100);
+        }
+
+        var Eko = 50;
+
+        if (Eko <= 50) {
+            var Eko = Eko;
+        } else {
+            var Eko = 50;
+        }
+
+        var HarEko = 20000 * Eko ;
+
+        keunEko = HarEko * (7/100);
+
+        var TotUn = keunVIP + keunEks + keunEko;
+        var Jumlah = HarVIP + HarEks + HarEko;
+        console.log ("keuntungan VIP = Rp. " + keunVIP)
+        console.log ("keuntungan Eksekutif = Rp. " + keunEks)
+        console.log ("keuntungan Ekonomi = Rp. " + keunEko)
+        console.log ("Total keuntungan = Rp. " + TotUn)
+        console.log ("Jumlah VIP = Rp. " + HarVIP)
+        console.log ("Jumlah Eksekutif = Rp. " + HarEks)
+        console.log ("Jumlah Ekonomi = Rp. " + HarEko)
+        console.log ("Total Jumlah = Rp. " + Jumlah)
+        console.log (`AAAAAAAAaaaaaaa`)
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Waktu</title>
+</head>
+<body>
+    <script>
+         function tambahsatudetik(waktu) {
+                let [jam, menit, detik] = waktu.split(':').map(Number);
+
+                if (detik < 59) {
+                    detik += 1;
+                } else {
+                    detik = 0;
+                    if (menit < 59) {
+                        menit += 1;
+                    } else {
+                        menit = 0;
+                        if (jam < 23) {
+                            jam += 1;
+                        } else {
+                            jam = 0;
+                        }
+                    }
+                }
+                return `${jam.toString().padStart(2, '0')}:${menit.toString().padStart(2, '0')}:${detik.toString().padStart(2, '0')}`;
+            }
+
+            let waktu1 = '02:13:23';
+            let waktu2 = '02:13:59';
+            let waktu3 = '02:59:59';
+            let waktu4 = '23:59:59';
+
+            console.log(`setelah ditambah 1 detik : ${tambahsatudetik(waktu1)}`);
+            console.log(`setelah ditambah 1 detik : ${tambahsatudetik(waktu2)}`);
+            console.log(`setelah ditambah 1 detik : ${tambahsatudetik(waktu3)}`);
+            console.log(`setelah ditambah 1 detik : ${tambahsatudetik(waktu4)}`);
+    </script>
+</body>
+</html>

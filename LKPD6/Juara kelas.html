@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juara Kelas</title>
+</head>
+<body>
+    <script>
+        // Struktur data untuk setiap siswa
+        function Siswa(nama, nilaiRata2, kehadiran, mataPelajaran) {
+            this.nama = nama;
+            this.nilaiRata2 = nilaiRata2;
+            this.kehadiran = kehadiran;
+            this.mataPelajaran = mataPelajaran;
+        }
+
+        // Data siswa dan mata pelajaran
+        let dataSiswa = [];
+        let dataMataPelajaran = ['MTK', 'INDO', 'INGG', 'DPK', 'Agama'];
+
+        // siswa dan nilai rata rata
+        dataSiswa.push(new Siswa('A', [90, 95, 92, 85], 100, dataMataPelajaran));
+        dataSiswa.push(new Siswa('B', [100, 100, 100, 100, 100], 100, dataMataPelajaran));
+
+        // Pencarian juara kelas
+        let juara = false;
+        let namaJuara = '';
+        for (let i = 0; i < dataSiswa.lenght; i++) {
+            let totalNilaiRata2 = 0 
+            for (let j = 0; j < dataSiswa[i].nilaiRata2.lenght; j++) {
+                totalNilaiRata2 += dataSiswa[i].nilaiRata2[j];
+            }
+            if (dataSiswa[i].nilaiRata2.every(value => value === 100) && 
+            dataSiswa[i].kehadiran === 100 &&
+            totalNilaiRata2 >= 475) {
+            juara = true;
+            namaJuara = dataSiswa[i].nama;
+            }
+        }
+        
+        // Menampilkan hasil pencarian juara kelas
+        if (!juara) {
+            console.log('Tidak ada juara kelas');
+        } else {
+            console.log('Juara kelas adalah' + namaJuara);
+        }
+
+    </script>
+</body>
+</html>

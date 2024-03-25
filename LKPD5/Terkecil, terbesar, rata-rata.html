@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terkecil, terbesar, rata-rata</title>
+</head>
+<body>
+    <script>
+         let total = 0;
+        let tinggi = 0; 
+        let rendah = 100;
+        for (let a = 1; a <= 20; a++){
+            bil = parseInt(prompt("Input bilangan (Hanya angka)"));
+            if (bil > tinggi){
+                tinggi = bil
+            } else {
+                tinggi = tinggi
+                if (bil < rendah) {
+                    rendah = bil
+                } else {
+                    rendah = rendah
+                }
+            }
+            total = total + bil
+        }
+        rata = total / 20
+
+        console.log (`${tinggi} tertinggi ${rendah} terendah ${total} total ${rata} rata-rata`)
+
+    </script>
+</body>
+</html>
